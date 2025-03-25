@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="sample.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="Logo">Mahima</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+
+    <section class="banner"></section>
+
+    <section class="title">
+
+        <p>Welcome to Mahima</p>
+        <button>About the Firm</button>
+
+    </section>
+
+    <script>
+
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            if (window.scrollY > 0) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        });
+    </script>
+
+    <section class="about">
+        <h1>NEWS AND INSIGHTS</h1>
+    </section>
+    <!-- Sticky Disclaimer -->
+    <div class="disclaimer" id="disclaimer">
+        <p><strong style="color: #004080;">DISCLAIMER</strong><br>
+            Under the rules of the Bar Council of India, Mahima is prohibited from soliciting work or advertising in
+            any form or manner. By accessing this website, www.mahima.com, you acknowledge that:<br>
+            • You are seeking information about Mahima of your own accord and there has been no form of solicitation,
+            advertisement, or inducement by Mahima or its members.<br>
+            • This website should not be construed as providing legal advice for any purpose.
+        </p>
+        <button id="agreeBtn">I Agree</button>
+    </div>
+
+    <script>
+        document.getElementById("agreeBtn").addEventListener("click", function () {
+            document.getElementById("disclaimer").style.display = "none";
+        });
+    </script>
+
+
+    <footer>
+        <div class="footer-content">
+            Mahima's Firm
+        </div>
+    </footer>
+
+</body>
+
+</html>
