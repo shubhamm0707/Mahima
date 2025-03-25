@@ -26,7 +26,6 @@ header {
 }
 
 header .Logo {
-    position: relative;
     font-weight: 700px;
     color: white;
     text-decoration: none;
@@ -36,20 +35,17 @@ header .Logo {
 }
 
 header ul {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 header ul li {
-    position: relative;
     list-style: none;
 }
 
 header ul li a {
-    position: relative;
-    margin: 0px 15px;
+    margin: 0px 20px;
     text-decoration: none;
     color: white;
     letter-spacing: 2px;
@@ -57,6 +53,10 @@ header ul li a {
     transition: 0.6s;
 }
 
+/* The reason the .banner starts from the top and not below the header is due to the position: fixed; property applied to the header. 
+When an element is fixed, it is positioned relative to the viewport, 
+and it does not affect the layout of other elements on the page. This means that the .banner element, which is positioned relatively, 
+will start immediately after the top of the page, effectively appearing behind the fixed header. */
 .banner {
     position: relative;
     width: 100%;
@@ -137,6 +137,7 @@ header.sticky {
 
 
 .about {
+
     width: 100%;
     height: 100vh;
     z-index: 2;
@@ -146,6 +147,7 @@ header.sticky {
     justify-content: start;
     align-items: center;
     font-size: 30px;
+    color: #003F62;
 }
 
 

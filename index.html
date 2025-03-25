@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="sample.css">
     <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+
 </head>
 
 <body>
@@ -27,6 +29,7 @@
 
     <section class="banner"></section>
 
+
     <section class="title">
 
         <p>Welcome to Mahima</p>
@@ -34,21 +37,12 @@
 
     </section>
 
-    <script>
-
-        window.addEventListener("scroll", function () {
-            var header = document.querySelector("header");
-            if (window.scrollY > 0) {
-                header.classList.add("sticky");
-            } else {
-                header.classList.remove("sticky");
-            }
-        });
-    </script>
 
     <section class="about">
         <h1>NEWS AND INSIGHTS</h1>
     </section>
+
+
     <!-- Sticky Disclaimer -->
     <div class="disclaimer" id="disclaimer">
         <p><strong style="color: #004080;">DISCLAIMER</strong><br>
@@ -61,18 +55,14 @@
         <button id="agreeBtn">I Agree</button>
     </div>
 
-    <script>
-        document.getElementById("agreeBtn").addEventListener("click", function () {
-            document.getElementById("disclaimer").style.display = "none";
-        });
-    </script>
-
 
     <footer>
         <div class="footer-content">
             Mahima's Firm
         </div>
     </footer>
+
+
 
 </body>
 
