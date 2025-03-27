@@ -5,6 +5,8 @@
 }
 
 :root {
+    --vh: 1vh;
+    --vw: 1vw;
     --primary-text-color: #005380;
 }
 
@@ -40,8 +42,8 @@
 }
 
 .container {
-    padding: 2vh;
-    padding-inline: 3vw;
+    padding: calc(2 * var(--vh));
+    padding-inline: calc(3 * var(--vw));
     position: relative;
 }
 
@@ -61,16 +63,16 @@ a {
     /* White text */
     border: 1px solid white;
     /* White border */
-    padding: 1vw 3vw;
+    padding: calc(1 * var(--vw)) calc(3 * var(--vw));
     /* Space inside button */
-    font-size: 0.8vw;
+    font-size: calc(0.8 * var(--vw));
     /* Make text capital */
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     display: inline-block;
-    margin-right: 1vw;
-    border-radius: 2vw;
+    margin-right: calc(1 * var(--vw));
+    border-radius: calc(2 * var(--vw));
     border-top-right-radius: 0px;
     font-family: 'Maven Pro Medium';
     font-weight: normal
@@ -90,16 +92,16 @@ a {
     /* White text */
     border: 1px solid var(--primary-text-color);
     /* White border */
-    padding: 1vw 3vw;
+    padding: calc(1 * var(--vw)) calc(3 * var(--vw));
     /* Space inside button */
-    font-size: 0.8vw;
+    font-size: calc(0.8 * var(--vw));
     /* Make text capital */
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     display: inline-block;
-    margin-right: 1vw;
-    border-radius: 2vw;
+    margin-right: calc(1 * var(--vw));
+    border-radius: calc(2 * var(--vw));
     border-top-right-radius: 0px;
     font-family: 'Maven Pro Medium';
     font-weight: normal
@@ -132,7 +134,7 @@ header.sticky {
 .logo {
     font-weight: 700px;
     text-decoration: none;
-    font-size: 2vw;
+    font-size: calc(2 * var(--vw));
     color: #ffffff;
     letter-spacing: 2px;
     transition: 0.6s;
@@ -148,8 +150,8 @@ header ul li {
 }
 
 header ul li a {
-    margin: 0px 1.5vw;
-    font-size: 0.9vw;
+    margin: 0px calc(1.5 * var(--vw));
+    font-size: calc(0.9 * var(--vw));
     color: white;
     letter-spacing: .1vw;
     font-weight: 500px;
@@ -180,7 +182,7 @@ will start immediately after the top of the page, effectively appearing behind t
 .banner {
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: calc(60 * var(--vh));
     background-image: url('assets/headerbg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -195,7 +197,7 @@ will start immediately after the top of the page, effectively appearing behind t
     top: 0;
     left: 0;
     width: 100%;
-    height: 60vh;
+    height: calc(60 * var(--vh));
     background: rgba(0, 63, 98, .7);
     /* Dark overlay */
     z-index: -1;
@@ -204,28 +206,28 @@ will start immediately after the top of the page, effectively appearing behind t
 .title {
     position: relative;
     z-index: 1000;
-    padding-top: 10vh;
+    padding-top: calc(10 * var(--vh));
 }
 
 .banner-subheading {
-    font-size: 1vw;
+    font-size: calc(1 * var(--vw));
     color: white;
     font-weight: 500;
     font-family: 'Maven Pro Medium';
 }
 
 .banner-heading {
-    margin-top: 2vh;
-    font-size: 1.8vw;
+    margin-top: calc(2 * var(--vh));
+    font-size: calc(1.8 * var(--vw));
     color: white;
     font-weight: 500;
     font-family: 'Maven Pro Medium';
 }
 
 .banner-rhym {
-    margin-top: 2vh;
+    margin-top: calc(2 * var(--vh));
 
-    font-size: 1vw;
+    font-size: calc(1 * var(--vw));
     color: white;
     font-weight: 500;
     font-family: 'Maven Pro Medium';
@@ -237,7 +239,7 @@ will start immediately after the top of the page, effectively appearing behind t
 
 .expertise {
     width: 100%;
-    height: 50vh;
+    height: calc(50 * var(--vh));
     background-color: rgba(114, 113, 113, 0.104);
     display: flex;
     justify-content: space-evenly;
@@ -251,8 +253,8 @@ will start immediately after the top of the page, effectively appearing behind t
 }
 
 .expertise-left h2 {
-    font-size: 2.2vw;
-    margin-bottom: 2vh;
+    font-size: calc(2.2 * var(--vw));
+    margin-bottom: calc(2 * var(--vh));
 }
 
 
@@ -267,19 +269,19 @@ will start immediately after the top of the page, effectively appearing behind t
 
 .about {
     justify-content: center;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-top: calc(2 * var(--vh));
+    margin-bottom: calc(2 * var(--vh));
 }
 
 .about h1 {
-    font-size: 2.4vw;
+    font-size: calc(2.4 * var(--vw));
 }
 
 /* Footer */
 
 footer {
     width: 100%;
-    height: 40vh;
+    height: calc(40 * var(--vh));
     background: linear-gradient(to right, #005380, #011223);
     border-radius: 125px 0 0 0;
     display: flex;
@@ -292,4 +294,13 @@ footer {
 .footer-content {
     font-size: 30px;
     color: white;
+}
+
+
+
+@media (max-width: 1000px) {
+    :root {
+        --vw: 1.5vw;
+        /* Adjust the value as needed for smaller screens */
+    }
 }
